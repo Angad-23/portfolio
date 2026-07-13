@@ -8,6 +8,10 @@
       name="description"
       content="Angad Dhiman — Technical Product & Program professional building Generative AI solutions for EdTech. 3+ years delivering scalable enterprise IT and AI-powered products."
     />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101D2E'/%3E%3Ctext x='32' y='43' font-family='Arial, sans-serif' font-size='26' font-weight='bold' fill='%23FFB92E' text-anchor='middle'%3EAD%3C/text%3E%3C/svg%3E"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -73,7 +77,7 @@
         padding: 14px 24px;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: center;
       }
       .nav-logo {
         font-family: var(--mono);
@@ -132,9 +136,33 @@
         );
         pointer-events: none;
       }
+      .hero-grid {
+        display: flex;
+        /* align-items: center; */
+        justify-content: space-between;
+        gap: 56px;
+        margin-top: 50px;
+      }
+      .hero-main {
+        min-width: 0;
+      }
+      .hero-photo {
+        flex-shrink: 0;
+        position: relative;
+        z-index: 1;
+      }
+      .hero-photo img {
+        width: 280px;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 5px solid var(--amber);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+        display: block;
+      }
       .hero-eyebrow {
         font-family: var(--mono);
-        font-size: 13px;
+        font-size: 15px;
         letter-spacing: 0.14em;
         text-transform: uppercase;
         color: var(--amber);
@@ -142,6 +170,7 @@
         display: flex;
         align-items: center;
         gap: 10px;
+        padding:;
       }
       .hero-eyebrow::before {
         content: "";
@@ -424,7 +453,7 @@
         font-weight: 700;
         font-size: 1.6rem;
         margin-bottom: 14px;
-        max-width: 650px;
+        max-width: 560px;
         position: relative;
         z-index: 1;
       }
@@ -636,6 +665,19 @@
         }
       }
 
+      @media (max-width: 860px) {
+        .hero-grid {
+          flex-direction: column-reverse;
+          align-items: flex-start;
+          gap: 28px;
+        }
+        .hero-photo img {
+          width: 140px;
+          height: 140px;
+          border-width: 4px;
+        }
+      }
+
       /* ---------- RESPONSIVE ---------- */
       @media (max-width: 720px) {
         .nav-links {
@@ -666,7 +708,7 @@
   <body>
     <nav aria-label="Main navigation">
       <div class="nav-inner">
-        <a class="nav-logo" href="#top">ANGAD<span>.</span>DHIMAN</a>
+        <!-- <a class="nav-logo" href="#top">ANGAD<span>.</span>DHIMAN</a> -->
         <ul class="nav-links">
           <li><a href="#experience">Experience</a></li>
           <li><a href="#research">Research</a></li>
@@ -683,33 +725,58 @@
           Open to opportunities: New Delhi · Gurugram · Noida · Bangalore ·
           Remote · India
         </p>
-        <p class="hero-greet">
-          <span class="wave" aria-hidden="true">👋</span>
-          <span id="greet-word">Hello</span>, I'm
-        </p>
-        <h1>Angad Dhiman</h1>
-        <p class="hero-role">
-          Technical Product &amp; Program Management
-          <!-- <span class="hl">Product</span> -->
-        </p>
-        <p class="hero-sum">
-          3+ years delivering scalable enterprise IT and AI-powered EdTech
-          solutions. I lead Generative AI initiatives end-to-end - authoring
-          PRDs, managing complex API integrations, and driving cross-functional
-          Agile delivery for US-based markets - backed by hands-on technical
-          depth from an M.Tech in Computer Science.
-        </p>
-        <div class="hero-ctas">
-          <a class="btn btn-primary" href="mailto:angaddhiman10@gmail.com"
-            >Email me</a
-          >
-          <a
-            class="btn btn-ghost"
-            href="https://linkedin.com/in/angaddhiman"
-            target="_blank"
-            rel="noopener"
-            >LinkedIn ↗</a
-          >
+        <div class="hero-grid">
+          <div class="hero-main">
+            <!-- <p class="hero-eyebrow">
+              Open to opportunities: New Delhi · Gurugram · Noida · Bangalore ·
+              Remote · India
+            </p> -->
+            <p class="hero-greet">
+              <span class="wave" aria-hidden="true">👋</span>
+              <span id="greet-word">Hello</span>, I'm
+            </p>
+            <h1>Angad Dhiman</h1>
+            <p class="hero-role">
+              Technical Product &amp; Program Management
+              <!-- <span class="hl">Product</span> -->
+            </p>
+            <p class="hero-sum">
+              3+ years delivering scalable enterprise IT and AI-powered EdTech
+              solutions. I lead Generative AI initiatives end-to-end - authoring
+              PRDs, managing complex API integrations, and driving
+              cross-functional Agile delivery for US-based markets - backed by
+              hands-on technical depth from an M.Tech in Computer Science.
+            </p>
+            <div class="hero-ctas">
+              <a class="btn btn-primary" href="mailto:angaddhiman10@gmail.com"
+                >Email me</a
+              >
+              <a
+                class="btn btn-ghost"
+                href="https://linkedin.com/in/angaddhiman"
+                target="_blank"
+                rel="noopener"
+                >LinkedIn ↗</a
+              >
+              <a
+                class="btn btn-ghost"
+                href="https://github.com/Angad-23"
+                target="_blank"
+                rel="noopener"
+                >GitHub ↗</a
+              >
+              <a class="btn btn-ghost" href="resume.pdf" download
+                >⬇ Download Resume</a
+              >
+            </div>
+          </div>
+          <div class="hero-photo">
+            <img
+              src="profile.jpg"
+              alt="Angad Dhiman"
+              onerror="this.closest('.hero-photo').style.display = 'none'"
+            />
+          </div>
         </div>
         <div class="hero-stats">
           <div class="stat">
@@ -817,15 +884,27 @@
               Accuracy Benchmark of Smile ML Against Python REST Microservices
             </h3>
             <p>
-              Designed and evaluated a prototype architecture leveraging deep
-              learning techniques built on the Deep Java Library (DJL). Focused
-              on model performance tuning, latency optimization, and real-world
-              scalability within high-frequency financial fraud scenarios.
+              Built a JVM-native fraud detection pipeline using Smile ML and
+              benchmarked it against an equivalent Python REST microservice,
+              statistically comparing end-to-end latency and model accuracy
+              under high-frequency transaction loads. Focused on latency
+              optimization, rigorous measurement methodology, and real-world
+              scalability for financial fraud scenarios.
             </p>
             <div class="research-chips">
-              <span>Deep Java Library</span><span>Deep Learning</span
-              ><span>Latency Optimization</span><span>Fraud Detection</span
-              ><span>Scalability</span>
+              <span>Smile ML</span><span>JVM</span
+              ><span>Python Microservices</span><span>Latency Benchmarking</span
+              ><span>Fraud Detection</span>
+            </div>
+            <div class="hero-ctas" style="margin: 26px 0 0">
+              <a
+                class="btn btn-ghost"
+                href="https://github.com/Angad-23/realtime-fraud-detection-djl"
+                target="_blank"
+                rel="noopener"
+                style="position: relative; z-index: 1"
+                >View code on GitHub ↗</a
+              >
             </div>
           </div>
         </div>
@@ -933,6 +1012,13 @@
             rel="noopener"
             >LinkedIn ↗</a
           >
+          <a
+            class="btn btn-ghost"
+            href="https://github.com/Angad-23"
+            target="_blank"
+            rel="noopener"
+            >GitHub ↗</a
+          >
         </div>
         <div class="foot-bottom">
           <span>© 2026 Angad Dhiman · New Delhi, India</span>
@@ -958,7 +1044,7 @@
             greetEl.textContent = greetings[gi];
             greetEl.classList.remove("fade");
           }, 350);
-        }, 2000);
+        }, 2600);
       }
 
       if (!prefersReduced && "IntersectionObserver" in window) {
